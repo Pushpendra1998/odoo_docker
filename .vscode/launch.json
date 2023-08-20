@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Odoo Docker Debugging",
+            "type": "python",
+            "request": "attach",
+            "port": 5678,
+            "host": "127.0.0.1",
+            "pathMappings": [
+                {
+                    "localRoot": "/home/pushpendra/odoo/16",
+                    "remoteRoot": "/home/odoo"
+                }
+            ]
+        }
+    ]
+}

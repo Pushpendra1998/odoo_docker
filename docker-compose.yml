@@ -1,0 +1,22 @@
+version: '3.0'
+services:
+  odoo_docker:
+    image: odoo_docker
+    container_name: odoo_docker
+    ports:
+      - 8069:8069
+      - 5678:5678
+
+    entrypoint: [
+      "python", 
+      "-m", "debugpy", "--listen", "0.0.0.0:5678", 
+      "/home/odoo/odoo_16.0/odoo-bin",
+      "--config", "/home/odoo/config/odoo.conf",
+      # "--update", "sale"
+    ]
+
+    volumes:
+      - /home/pushpendra/odoo/16:/home/odoo   # Source Addons
+      - ./config:/home/odoo/config            # Odoo conf
+      - /home/pushpendra/.local/share/Odoo:/root/.local/share/Odoo # Odoo filestore mapping
+
