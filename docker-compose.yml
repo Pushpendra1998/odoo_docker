@@ -1,8 +1,8 @@
 version: '3.0'
 services:
-  odoo_docker:
-    image: odoo_docker
-    container_name: odoo_docker
+  odoo_16:
+    image: odoo_16
+    container_name: odoo_16
     ports:
       - 8069:8069
       - 5678:5678

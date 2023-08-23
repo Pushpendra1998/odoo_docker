@@ -1,5 +1,5 @@
 # Build docker image
-`docker build -t odoo_docker .`
+`docker build -t odoo_16 .`
 
 # Allow remote access to postgres
 1. Change in postresql.conf file
