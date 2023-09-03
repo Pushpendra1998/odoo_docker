@@ -8,7 +8,7 @@ SHELL ["/bin/bash", "-xo", "pipefail", "-c"]
 ENV LANG C.UTF-8
 
 # # Install Odoo
-ENV ODOO_VERSION 16.0
+ENV ODOO_VERSION 15.0
 
 RUN apt-get update \
     && apt-get install -y \
