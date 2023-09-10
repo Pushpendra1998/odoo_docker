@@ -1,7 +1,7 @@
 # Build docker image
 `docker build -t odoo_16 .`
 
-# Allow remote access to postgres
+<!-- # Allow remote access to postgres
 1. Change in postresql.conf file
     `sudo nano /etc/postgresql/{postgres_version}/main/postgresql.conf`
 
@@ -22,6 +22,6 @@
     `sudo ufw allow 5432/tcp`
 
 4. Restart postgresql service
-    `sudo systemctl restart postgresql`
+    `sudo systemctl restart postgresql` -->
 
 
