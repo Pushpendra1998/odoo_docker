@@ -3,20 +3,17 @@ services:
   odoo_16:
     image: odoo_16
     container_name: odoo_16
-    ports:
-      - 8069:8069
-      - 5678:5678
-
+    network_mode: host
     entrypoint: [
       "python", 
       "-m", "debugpy", "--listen", "0.0.0.0:5678", 
-      "/home/odoo/odoo_16.0/odoo-bin",
+      "/home/odoo/odoo_16/odoo-bin",
       "--config", "/home/odoo/config/odoo.conf",
       # "--update", "sale"
     ]
 
     volumes:
-      - /home/pushpendra/odoo/16:/home/odoo   # Source Addons
+      - /home/pushpendra/odoo/odoo_16:/home/odoo/odoo_16   # Source Addons
       - ./config:/home/odoo/config            # Odoo conf
       - /home/pushpendra/.local/share/Odoo:/root/.local/share/Odoo # Odoo filestore mapping
 
